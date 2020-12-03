@@ -36,7 +36,7 @@ void Triangle::SetPixelShader()
 }
 
 /// <summary>
-/// 渲染过程
+/// 准备数据
 /// </summary>
 void Triangle::PrepareData()
 {
@@ -100,6 +100,9 @@ void Triangle::PrepareData()
 #pragma endregion
 }
 
+/// <summary>
+/// 实时渲染
+/// </summary>
 void Triangle::Rendering()
 {
     glUseProgram(shaderProgram);
@@ -107,6 +110,9 @@ void Triangle::Rendering()
     glDrawArrays(GL_TRIANGLES, 0, 3);
 }
 
+/// <summary>
+/// 清除数据
+/// </summary>
 void Triangle::DeleteData()
 {
     glDeleteVertexArrays(1, &VAO);
