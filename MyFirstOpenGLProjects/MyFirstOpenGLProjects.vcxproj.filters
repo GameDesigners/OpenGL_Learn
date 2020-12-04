@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Environment\GLAD\src\glad.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -27,12 +24,21 @@
     <ClCompile Include="Edge.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\Environment\GLAD\src\glad.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LOG.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Triangle.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Edge.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LOG.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

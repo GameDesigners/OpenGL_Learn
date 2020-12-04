@@ -72,16 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\ZhuSenlin Project\[Learn]OpenGL\Environment\GLAD\include;E:\ZhuSenlin Project\[Learn]OpenGL\Environment\GLFW\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\ZhuSenlin Project\[Learn]OpenGL\Environment\GLFW\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\ZhuSenlin Project\[Learn]OpenGL\MyFirstOpenGLProjects\Environment\GLAD\include;E:\ZhuSenlin Project\[Learn]OpenGL\MyFirstOpenGLProjects\Environment\GLFW\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\ZhuSenlin Project\[Learn]OpenGL\MyFirstOpenGLProjects\Environment\GLFW\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\ZhuSenlin Project\[Learn]OpenGL\Environment\GLAD\include;E:\ZhuSenlin Project\[Learn]OpenGL\Environment\GLFW\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\ZhuSenlin Project\[Learn]OpenGL\Environment\GLFW\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\ZhuSenlin Project\[Learn]OpenGL\MyFirstOpenGLProjects\Environment\GLAD\include;E:\ZhuSenlin Project\[Learn]OpenGL\MyFirstOpenGLProjects\Environment\GLFW\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\ZhuSenlin Project\[Learn]OpenGL\MyFirstOpenGLProjects\Environment\GLFW\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -145,13 +145,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Environment\GLAD\src\glad.c" />
+    <ClCompile Include="..\Environment\GLAD\src\glad.c" />
     <ClCompile Include="Edge.cpp" />
+    <ClCompile Include="LOG.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Edge.h" />
+    <ClInclude Include="LOG.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -98,8 +98,6 @@ void Edge::PrepareData()
     glEnableVertexAttribArray(0);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-    glBindVertexArray(0);
 
     if (renderMode == GL_LINE)
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -113,7 +111,7 @@ void Edge::Rendering()
     glUseProgram(shaderProgram);
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-    glBindVertexArray(0);
+    //glBindVertexArray(0);
 }
 
 void Edge::DeleteData()

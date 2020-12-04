@@ -4,6 +4,7 @@
 
 #include "Triangle.h"
 #include "Edge.h"
+#include "LOG.h"
 
 using namespace std;
 
@@ -53,6 +54,8 @@ int main()
 
 	glViewport(0, 0, 800, 600);
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+	std::cout << "Maximum nr of vertex attributes supported: " << LOG::GetIntegerv() << std::endl;
 
 	Triangle triangle;
 	triangle.PrepareData();
