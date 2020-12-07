@@ -1,6 +1,4 @@
 ﻿  Edge.cpp
-  LOG.cpp
-  main.cpp
+  Texture.cpp
   正在生成代码...
-LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
   MyFirstOpenGLProjects.vcxproj -> E:\ZhuSenlin Project\[Learn]OpenGL\MyFirstOpenGLProjects\Debug\MyFirstOpenGLProjects.exe

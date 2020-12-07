@@ -2,22 +2,24 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include <glad\glad.h>
+#include <glfw3.h>
 using namespace std;
 
-#ifndef __glad_h_
-#include <glad\glad.h>
-#endif
+#include "Shader.h"
+#include "Texture.h"
 
 class Edge
 {
 public:
     //顶点数据
-    float vertices[12] =
+    float vertices[32] =
     {
-        0.5f, 0.5f, 0.0f,   // 右上角
-        0.5f, -0.5f, 0.0f,  // 右下角
-        -0.5f, -0.5f, 0.0f, // 左下角
-        -0.5f, 0.5f, 0.0f   // 左上角
+    //  -----位置--------   -----颜色------  -纹理坐标-
+        0.5f,  0.5f, 0.0f,  1.0f,0.0f,0.0f,  1.0f,1.0f,            // 右上角
+        0.5f, -0.5f, 0.0f,  0.0f,1.0f,0.0f,  1.0f,0.0f,           // 右下角
+       -0.5f, -0.5f, 0.0f,  0.0f,0.0f,1.0f,  0.0f,0.0f,           // 左下角
+       -0.5f,  0.5f, 0.0f,  1.0f,1.0f,0.0f,  0.0f,1.0f           // 左上角
     };
 
     //索引数据
@@ -28,10 +30,6 @@ public:
         1, 2, 3  // 第二个三角形
     };
 
-    const char* vertexShaderSource;    //顶点着色器
-    const char* pixelShaderSource;     //像素着色器
-
-    int shaderProgram;                 //着色器程序
     unsigned int VBO;                  //顶点缓存对象
     unsigned int VAO;                  //顶点数组对象
     unsigned int EBO;                  //索引缓冲对象
@@ -39,19 +37,18 @@ public:
     //渲染属性
     GLenum renderMode= GL_FILL;        //渲染模式
 
-    //log变量
-    int shaderCompileSuc;     //Shader编译是否成功
-    int shaderLinkSuc;        //Shader链接是否成功
-    char infoLog[512];        //Log数组
 
 public:
-    Edge();
-    Edge(GLenum _rendermode);
+    Edge(string _vetexFilePath, string _fragmentFilePath, string _texturePath);
+    Edge(string _vetexFilePath, string _fragmentFilePath,GLenum _rendermode, string _texturePath);
 
-    void SetVertexShader();
-    void SetPixelShader();
+
     void PrepareData();  //准备数据
     void Rendering();    //渲染
     void DeleteData();
+
+private:
+    Shader* ourShader;
+    Texture* ourTex;
 };
 

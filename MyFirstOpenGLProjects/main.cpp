@@ -57,11 +57,8 @@ int main()
 
 	std::cout << "Maximum nr of vertex attributes supported: " << LOG::GetIntegerv() << std::endl;
 
-	Triangle triangle;
-	triangle.PrepareData();
-
-	Edge edge(GL_LINE);
-	edge.PrepareData();
+	//Triangle triangle("./Shaders/VertexShader.shader","./Shaders/FragmentShader.shader");
+	Edge edge("./Shaders/Edge_Vertex_Shader.shader", "./Shaders/Edge_Fragment_Shader.shader","./Resources/wall.jpg");
 	//渲染循环
 	while (!glfwWindowShouldClose(window))
 	{
@@ -71,15 +68,13 @@ int main()
 		glClearColor(0.0f, 0.0f, 0.0f, 0.0f);    //颜色清空屏幕
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		//创建一个Triangle并渲染出来
-		//triangle.Rendering();
 		edge.Rendering();
+		
 		//检查并调用事件，交换缓冲
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
 
-	triangle.DeleteData();
 	edge.DeleteData();
 
 	glfwTerminate();

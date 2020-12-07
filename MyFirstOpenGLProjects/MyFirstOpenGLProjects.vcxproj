@@ -149,12 +149,27 @@
     <ClCompile Include="Edge.cpp" />
     <ClCompile Include="LOG.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="stb_image.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Edge.h" />
     <ClInclude Include="LOG.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="Triangle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FragmentShader.shader" />
+    <None Include="Shaders\Edge_Fragment_Shader.shader" />
+    <None Include="Shaders\Edge_Vertex_Shader.shader" />
+    <None Include="VertexShader.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\wall.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
